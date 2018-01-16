@@ -1,18 +1,18 @@
 [Unit]
-Description=Bitcoin Core for Bitcore
+Description=Florincoin Core for Flocore
 Requires=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/usr/opt/bitcore
-ExecStart=/usr/bin/bitcore-bitcoind -datadir=/home/bitcore/.bitcore/data/
+WorkingDirectory=/usr/opt/flocore
+ExecStart=/usr/bin/flocore-florincoind -datadir=/home/flocore/.flocore/data/
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure
 RestartSec=15
-User=bitcore
-ExecStartPre=/bin/mkdir -p /run/bitcore
-ExecStartPre=/bin/chown bitcore:bitcore /run/bitcore
-ExecStartPre=/bin/chmod 755 /run/bitcore
+User=flocore
+ExecStartPre=/bin/mkdir -p /run/flocore
+ExecStartPre=/bin/chown flocore:flocore /run/flocore
+ExecStartPre=/bin/chmod 755 /run/flocore
 PermissionsStartOnly=true
 TimeoutStopSec=300
 

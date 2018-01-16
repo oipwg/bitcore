@@ -1,7 +1,7 @@
 {
-  "name": "bitcore",
+  "name": "flocore",
   "version": "5.0.0-beta.44",
-  "description": "A platform to build bitcoin and blockchain-based applications.",
+  "description": "A platform to build Florincoin and blockchain-based applications.",
   "engines": {
     "node": ">=8.0.0"
   },
@@ -12,11 +12,12 @@
     "build-deb": "./scripts/build-deb"
   },
   "bin": {
-    "bitcore": "./bin/bitcore",
-    "bitcored": "./bin/bitcored"
+    "flocore": "./bin/flocore",
+    "flocored": "./bin/flocored"
   },
   "keywords": [
-    "bitcoin",
+    "flo",
+    "florincoin",
     "transaction",
     "address",
     "p2p",
@@ -33,13 +34,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitpay/bitcore.git"
+    "url": "https://github.com/oipwg/flocore.git"
   },
   "dependencies": {
-    "bitcore-lib": "5.0.0-beta.1",
-    "bitcore-node": "5.0.0-beta.44",
-    "insight-api": "5.0.0-beta.44",
-    "insight-ui": "bitpay/insight#v5.0.0-beta.44"
+    "flocore-lib": "5.0.0-beta.1",
+    "flocore-node": "5.0.0-beta.44",
+    "flosight-api": "5.0.0-beta.44",
+    "flosight-ui": "bitpay/insight#v5.0.0-beta.44"
   },
   "license": "MIT",
   "devDependencies": {

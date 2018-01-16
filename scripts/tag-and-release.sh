@@ -5,8 +5,8 @@ set -e
 
 insightApiDir="${HOME}/source/insight-api"
 insightUIDir="${HOME}/source/insight-ui"
-bitcoreDir="${HOME}/source/bitcore"
-bitcoreNodeDir="${HOME}/source/bitcore-node"
+flocoreDir="${HOME}/source/flocore"
+flocoreNodeDir="${HOME}/source/flocore-node"
 
 ###########################################################
 
@@ -17,7 +17,7 @@ bump_version () {
 }
 
 set_deps () {
-  sed -i '' -e "s/\"bitcore-node\"\: .*$/\"bitcore-node\"\: \"${shortTag}\",/g" package.json
+  sed -i '' -e "s/\"flocore-node\"\: .*$/\"flocore-node\"\: \"${shortTag}\",/g" package.json
   sed -i '' -e "s/\"insight-api\"\: .*$/\"insight-api\"\: \"${shortTag}\",/g" package.json
   sed -i '' -e "s/\"insight-ui\"\: .*$/\"insight-ui\"\: \"bitpay\/insight\#${tag}\"/g" package.json
 }
@@ -33,13 +33,13 @@ fi
 
 
 #############################################
-# bitcore-node
+# flocore-node
 #############################################
-function bitcoreNode() {
+function flocoreNode() {
   echo ""
-  echo "Starting with bitcore-node..."
+  echo "Starting with flocore-node..."
   sleep 2
-  pushd "${bitcoreNodeDir}"
+  pushd "${flocoreNodeDir}"
 
   sudo rm -fr node_modules
   bump_version
@@ -58,7 +58,7 @@ function bitcoreNode() {
   fi
 
   echo ""
-  echo "Committing changes for bitcore-node..."
+  echo "Committing changes for flocore-node..."
   sleep 2
   git commit -S
 
@@ -183,13 +183,13 @@ function insightUi() {
 }
 
 #############################################
-# bitcore
+# flocore
 #############################################
-function bitcore() {
+function flocore() {
   echo ""
-  echo "Releasing bitcore..."
+  echo "Releasing flocore..."
   sleep 2
-  pushd "${bitcoreDir}"
+  pushd "${flocoreDir}"
 
   sudo rm -fr node_modules
   bump_version
@@ -210,7 +210,7 @@ function bitcore() {
   fi
 
   echo ""
-  echo "Committing changes for bitcore..."
+  echo "Committing changes for flocore..."
   sleep 2
   git commit -S
 
@@ -243,10 +243,10 @@ echo "Assuming projects at ${HOME}/source..."
 
 releases="${2}"
 if [ -z "${releases}" ]; then
-  bitcoreNode
+  flocoreNode
   insightApi
   insightUi
-  bitcore
+  flocore
 else
   eval "${releases}"
 fi

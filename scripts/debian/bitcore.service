@@ -4,15 +4,15 @@ Requires=network.target
 
 [Service]
 Type=simple
-WorkingDirectory=/usr/opt/bitcore
-ExecStart=/usr/opt/bitcore/bin/bitcored
+WorkingDirectory=/usr/opt/flocore
+ExecStart=/usr/opt/flocore/bin/flocored
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure
 RestartSec=15
-User=bitcore
-ExecStartPre=/bin/mkdir -p /run/bitcore
-ExecStartPre=/bin/chown bitcore:bitcore /run/bitcore
-ExecStartPre=/bin/chmod 755 /run/bitcore
+User=flocore
+ExecStartPre=/bin/mkdir -p /run/flocore
+ExecStartPre=/bin/chown flocore:flocore /run/flocore
+ExecStartPre=/bin/chmod 755 /run/flocore
 PermissionsStartOnly=true
 TimeoutStopSec=300
 

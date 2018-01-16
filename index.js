@@ -1,5 +1,5 @@
 'use strict';
 
-var bitcore = require('bitcore-lib');
+var flocore = require('flocore-lib');
 
-module.exports = bitcore;
+module.exports = flocore;

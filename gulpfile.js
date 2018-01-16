@@ -1,5 +1,5 @@
 
 
-var bitcoreTasks = require('bitcore-build');
+var flocoreTasks = require('flocore-build');
 
-bitcoreTasks();
+flocoreTasks();
