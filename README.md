@@ -10,12 +10,13 @@ Infrastructure to build Florincoin and blockchain-based applications for the nex
 
 ## Getting Started
 
-### Running a Flocore server
 Before you begin you'll need to have Node.js v8 installed. There are several options for installation. One method is to use [nvm](https://github.com/creationix/nvm) to easily switch between different versions, or download directly from [Node.js](https://nodejs.org/).
 
 ```bash
 npm install -g flocore
 ```
+
+### Running a Flocore server
 
 Spin up a full node and join the network:
 
