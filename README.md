@@ -10,6 +10,7 @@ Infrastructure to build Florincoin and blockchain-based applications for the nex
 
 ## Getting Started
 
+### Running a Flocore server
 Before you begin you'll need to have Node.js v8 installed. There are several options for installation. One method is to use [nvm](https://github.com/creationix/nvm) to easily switch between different versions, or download directly from [Node.js](https://nodejs.org/).
 
 ```bash
@@ -24,6 +25,8 @@ flocored
 ```
 
 You can then view the Insight block explorer at the default location: `http://localhost:3001/insight`, and your configuration file will be found in your home directory at `~/.flocore`.
+
+### Using Flocore programmatically
 
 Create a transaction:
 ```js
